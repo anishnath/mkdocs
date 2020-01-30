@@ -24,7 +24,7 @@ pipeline {
                 docker { image 'anishnath/mkdocs:$BUILD_NUMBER' }
             }
             steps {
-                sh 'mvn --version'
+                sh 'mkdocs --version'
             }
         }
 
