@@ -21,7 +21,7 @@ pipeline {
 
     stage('Test Mkdocs' ) {
                 agent {
-                docker { image 'anishnath/mkdocs:BUILD_NUMBER' }
+                docker { image 'anishnath/mkdocs:$BUILD_NUMBER' }
             }
             steps {
                 sh 'mvn --version'
