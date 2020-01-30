@@ -20,6 +20,9 @@ pipeline {
     }
 
     stage('Test mkdocs image') {
+      agent {
+                docker { image '$dockerImage' }
+            }
       steps{
         script {
           sh 'mkdocs --version'
