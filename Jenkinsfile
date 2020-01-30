@@ -18,6 +18,15 @@ pipeline {
         }
       }
     }
+
+    stage('Test mkdocs image') {
+      steps{
+        script {
+          sh 'mkdocs --version'
+        }
+      }
+    }
+
     stage('Deploy Image') {
       steps{
         script {
