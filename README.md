@@ -1,6 +1,6 @@
 # About
 
-Build and serve your existing mkdocs project 
+Build and serve your existing mkdocs project over http
 
 ## Installation 
 
@@ -11,7 +11,7 @@ Build and serve your existing mkdocs project
 	$ git clone https://github.com/anishnath/mkdocs.git
 	```
 
-- Get your  MD project project in the mkdocs directory
+- Get your existing project in  the `mkdocs` directory
 
 	```
 	$ ls -ltr
@@ -23,9 +23,11 @@ Build and serve your existing mkdocs project
 	-rw-r--r--  1 anishnath  staff  3749 Jan 30 14:54 README.md
 	```
 
+Note **my-project** is sample mkdocs project which will be build by 
+
 ## Using mkdockerize.sh command  
 
-**mkdockerize.sh** : This tool will help to build the mkdocs project, generate the site configuration and serve the mkdocs project over the http port 
+**mkdockerize.sh** : This tool will help to build the mkdocs project, generate the site configuration and serve the mkdocs project over the http port `http://localhost:8000`
 
 ```
 $ ./mkdockerize.sh -h
@@ -114,6 +116,10 @@ Sample Output
 
 ![enter image description here](https://raw.githubusercontent.com/anishnath/mkdocs/master/install.png)
 
+### Jenkinsfile
+
+![Jenkins Pipeline Image](https://raw.githubusercontent.com/anishnath/mkdocs/master/pipline.png)
+
 ## Security Consideration
 
 From the threat Model Perspective of Microservices
@@ -136,3 +142,7 @@ PID   USER     TIME  COMMAND
 
 No active Vulnerability SCAN located in this image, I have used opensource scanner **anchore-cli**
 
+### Caveat
+
+- The shell script needs to accept the full PATH 
+- TLS is not supported yet 
