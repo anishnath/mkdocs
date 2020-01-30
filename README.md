@@ -1,4 +1,27 @@
+# About
 
+Build and serve your existing mkdocs project 
+
+## Installation 
+
+
+- Perform the git clone
+
+	```
+	$ git clone https://github.com/anishnath/mkdocs.git
+	```
+
+- Get your  MD project project in the mkdocs directory
+
+	```
+	$ ls -ltr
+	total 32
+	-rw-r--r--  1 anishnath  staff  1167 Jan 30 14:09 Dockerfile
+	-rwxr-xr-x@ 1 anishnath  staff  1816 Jan 30 14:45 docker-entrypoint.sh
+	-rwxr-xr-x@ 1 anishnath  staff  3345 Jan 30 14:50 mkdockerize.sh
+	drwxr-xr-x  6 anishnath  staff  192 Jan 30 14:51 my-project [This is your mkdocs Project]
+	-rw-r--r--  1 anishnath  staff  3749 Jan 30 14:54 README.md
+	```
 
 ## Using mkdockerize.sh command  
 
@@ -88,7 +111,8 @@ INFO    -  Cleaning site directory
 ```
 
 Sample Output 
-https://imgur.com/dSOzJLH
+
+![enter image description here](https://raw.githubusercontent.com/anishnath/mkdocs/master/install.png)
 
 ## Security Consideration
 
@@ -111,5 +135,4 @@ PID   USER     TIME  COMMAND
 ### Vulnerability Scanning
 
 No active Vulnerability SCAN located in this image, I have used opensource scanner **anchore-cli**
-
 
