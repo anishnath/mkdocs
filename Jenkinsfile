@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "gustavoapolinario/docker-test"
+    registry = "anishnath/mkdocs"
     registryCredential = 'docker-creds'
     dockerImage = ''
   }
