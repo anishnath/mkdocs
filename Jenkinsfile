@@ -19,16 +19,15 @@ pipeline {
       }
     }
 
-    stage('Test mkdocs image') {
-      agent {
-                docker { image '$dockerImage' }
+    stage('Test Mkdocs' ) {
+                agent {
+                docker { image 'anishnath/mkdocs:BUILD_NUMBER' }
             }
-      steps{
-        script {
-          sh 'mkdocs --version'
+            steps {
+                sh 'mvn --version'
+            }
         }
-      }
-    }
+
 
     stage('Deploy Image') {
       steps{
